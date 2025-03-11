@@ -2,7 +2,7 @@
   "name": "git-admin-api",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dmi3ii2018.github.io/git-admin-api",
+  "homepage": "https://dmi3ii2018.github.io/git-admin-api/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.6.1",
     "@testing-library/dom": "^10.4.0",
