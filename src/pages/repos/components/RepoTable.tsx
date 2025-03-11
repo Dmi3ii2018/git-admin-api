@@ -4,8 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 import {
   fetchRepositories,
-} from "../../store/repos";
-import type { RootState } from "../../store/store";
+} from "../../../store/repos";
+import type { RootState } from "../../../store/store";
 
 import { UpdateRepo } from "./UpdateRepo";
 import { DeleteRepoButton } from "./DeleteRepo";
@@ -78,7 +78,7 @@ export function RepoTable({ login, token }: RepoTableProps) {
       },
     },
   ];
-console.log(repositories)
+
   if (status === "loading") return <p>Загрузка...</p>;
   if (error) return <p>Ошибка: {error}</p>;
 

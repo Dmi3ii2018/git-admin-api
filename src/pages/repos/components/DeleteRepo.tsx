@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Modal, Button, message } from "antd";
 import { useDispatch } from "react-redux";
-import { deleteRepository } from "../../store/repos";
+import { deleteRepository } from "../../../store/repos";
 
 interface DeleteRepoModalProps {
   login: string;

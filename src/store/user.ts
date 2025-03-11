@@ -9,7 +9,7 @@ interface User {
 interface UserState {
   user: User | null;
   status: "idle" | "loading" | "succeeded" | "failed";
-  error: string | null;
+  error?: string | null;
   token: string | null;
 }
 
@@ -19,10 +19,18 @@ const initialState: UserState = {
   error: null,
   token: null,
 }
+interface AuthenticateGitHubParams {
+  login: string;
+  token: string;
+}
+interface AuthenticateGitHubResponse {
+  response: any; // Здесь можно уточнить тип в зависимости от данных, возвращаемых GitHub API
+  token: string;
+}
 
-export const authenticateGitHub = createAsyncThunk(
+export const authenticateGitHub = createAsyncThunk<AuthenticateGitHubResponse, AuthenticateGitHubParams>(
   'auth/authenticateGitHub',
-  async ({ login, token }: {login: string, token: string}) => {
+  async ({ login, token }) => {
     const response = await axios.get(`https://api.github.com/users/${login}`, {
       headers: {
         Authorization: `token ${token}`,
@@ -39,7 +47,7 @@ const authSlice = createSlice({
     logout: (state) => {
       state.user = null;
       state.status = 'idle';
-      state.error = null;
+      state.error = undefined;
     },
   },
   extraReducers: (builder) => {
@@ -54,7 +62,6 @@ const authSlice = createSlice({
       })
       .addCase(authenticateGitHub.rejected, (state, action) => {
         state.status = 'failed';
-        //@ts-ignore
         state.error = action.error.message;
       });
   },

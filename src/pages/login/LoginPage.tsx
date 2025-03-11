@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 
 import { Form, Input, Button, Alert } from "antd";
 
-import type { RootState } from "../../store/store";
+import type { RootState, AppDispatch } from "../../store/store";
 
 import { authenticateGitHub } from "../../store/user";
 
@@ -15,13 +15,14 @@ type FieldType = {
 };
 
 export function LoginPage() {
-  const dispatch = useDispatch();
-  let navigate = useNavigate();
+  const dispatch = useDispatch<AppDispatch>();
+  const navigate = useNavigate();
+  
   const { status, error } = useSelector((state: RootState) => state.user);
 
   const onFinish = async (values: any) => {
     const { login, token } = values;
-    //@ts-ignore
+
     const res = await dispatch(authenticateGitHub({ login, token }));
 
     if (res.payload) {

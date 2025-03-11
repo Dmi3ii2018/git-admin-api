@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Modal, Button, Descriptions, Spin, message } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchRepositoryDetails } from "../../store/repos";
+import { fetchRepositoryDetails } from "../../../store/repos";
 
 interface RepoDetailsModalProps {
   login: string;

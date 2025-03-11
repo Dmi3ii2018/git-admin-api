@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Modal, Form, Input, Select, Button, message } from "antd";
 import { useDispatch } from "react-redux";
-import { createRepository } from "../../store/repos";
+import { createRepository } from "../../../store/repos";
 
 interface CreateRepoButtonProps {
   login?: string;

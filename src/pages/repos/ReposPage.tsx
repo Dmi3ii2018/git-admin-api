@@ -5,8 +5,8 @@ import { Avatar, Layout } from "antd";
 
 import type { RootState } from "../../store/store";
 
-import { RepoTable } from "./RepoTable";
-import { CreateRepoButton } from "./CreateRepoButton";
+import { RepoTable } from "./components/RepoTable";
+import { CreateRepoButton } from "./components/CreateRepoButton";
 
 import "./style.css";
 
@@ -15,7 +15,6 @@ const { Header, Content } = Layout;
 export function ReposPage() {
   let navigate = useNavigate();
   const { user, token } = useSelector((state: RootState) => state.user);
-
 
   useEffect(() => {
     if (!token) {
