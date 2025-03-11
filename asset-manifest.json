@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/git-admin-api/static/css/main.517b3342.css",
-    "main.js": "/git-admin-api/static/js/main.30289b25.js",
+    "main.js": "/git-admin-api/static/js/main.4a35b0a3.js",
     "static/js/453.4b4d1f7e.chunk.js": "/git-admin-api/static/js/453.4b4d1f7e.chunk.js",
     "index.html": "/git-admin-api/index.html",
     "main.517b3342.css.map": "/git-admin-api/static/css/main.517b3342.css.map",
-    "main.30289b25.js.map": "/git-admin-api/static/js/main.30289b25.js.map",
+    "main.4a35b0a3.js.map": "/git-admin-api/static/js/main.4a35b0a3.js.map",
     "453.4b4d1f7e.chunk.js.map": "/git-admin-api/static/js/453.4b4d1f7e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.517b3342.css",
-    "static/js/main.30289b25.js"
+    "static/js/main.4a35b0a3.js"
   ]
 }
