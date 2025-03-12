@@ -3,4 +3,10 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+
+    background-image: url('../../assets/githubLogo.png');
+    background-size: 200px 110px;
+    background-position: center 10%;
+    background-repeat: no-repeat;
+
 }

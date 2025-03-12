@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 
 import { Form, Input, Button, Alert } from "antd";
-
 import type { RootState, AppDispatch } from "../../store/store";
 
 import { authenticateGitHub } from "../../store/user";
@@ -17,7 +16,7 @@ type FieldType = {
 export function LoginPage() {
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
-  
+
   const { status, error } = useSelector((state: RootState) => state.user);
 
   const onFinish = async (values: any) => {
@@ -26,7 +25,7 @@ export function LoginPage() {
     const res = await dispatch(authenticateGitHub({ login, token }));
 
     if (res.payload) {
-      navigate('/repos');
+      navigate("/repos");
     }
   };
 
@@ -34,6 +33,7 @@ export function LoginPage() {
 
   return (
     <main className="container">
+      <div>
       <Form
         name="auth"
         labelCol={{ span: 9 }}
@@ -59,7 +59,14 @@ export function LoginPage() {
           <Input.Password />
         </Form.Item>
 
-        {error && !isLoading && <Alert message={error} type="error" showIcon style={{ marginBottom: 16 }} />}
+        {error && !isLoading && (
+          <Alert
+            message={error}
+            type="error"
+            showIcon
+            style={{ marginBottom: 16 }}
+          />
+        )}
 
         <Form.Item label={null}>
           <Button
@@ -72,6 +79,7 @@ export function LoginPage() {
           </Button>
         </Form.Item>
       </Form>
+      </div>
     </main>
   );
 }
