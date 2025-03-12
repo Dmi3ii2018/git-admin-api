@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/git-admin-api/static/css/main.517b3342.css",
-    "main.js": "/git-admin-api/static/js/main.39eaab46.js",
+    "main.css": "/git-admin-api/static/css/main.4d6a6a42.css",
+    "main.js": "/git-admin-api/static/js/main.92e8bab2.js",
     "static/js/453.4b4d1f7e.chunk.js": "/git-admin-api/static/js/453.4b4d1f7e.chunk.js",
+    "static/media/githubLogo.png": "/git-admin-api/static/media/githubLogo.d602c8763da57ff3f186.png",
     "index.html": "/git-admin-api/index.html",
-    "main.517b3342.css.map": "/git-admin-api/static/css/main.517b3342.css.map",
-    "main.39eaab46.js.map": "/git-admin-api/static/js/main.39eaab46.js.map",
+    "main.4d6a6a42.css.map": "/git-admin-api/static/css/main.4d6a6a42.css.map",
+    "main.92e8bab2.js.map": "/git-admin-api/static/js/main.92e8bab2.js.map",
     "453.4b4d1f7e.chunk.js.map": "/git-admin-api/static/js/453.4b4d1f7e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.517b3342.css",
-    "static/js/main.39eaab46.js"
+    "static/css/main.4d6a6a42.css",
+    "static/js/main.92e8bab2.js"
   ]
 }
