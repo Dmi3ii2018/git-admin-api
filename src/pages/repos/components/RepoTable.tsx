@@ -57,6 +57,7 @@ export function RepoTable({ login, token }: RepoTableProps) {
                 token={token}
                 repoName={record.name}
                 initialVisibility={record.visibility}
+                initialDescription={record.description}
               />
             )}
             {login && token && (
